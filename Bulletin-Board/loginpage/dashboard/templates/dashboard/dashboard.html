@@ -1,0 +1,52 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>dashboard</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<link rel="shortcut icon" href="{% static 'file.ico' %}">
+	{% if teacher == True %}
+	<!-- stylesheet for teacher -->
+	<link rel="stylesheet" type="text/css" href="{% static 'dashboard-teacher.css' %}">
+	{% endif %}
+	{% if student == True %}
+	<!-- stylesheet for student -->
+	<link rel="stylesheet" type="text/css" href="{% static 'dashboard-student.css' %}">
+	{% endif %}
+</head>
+<body>
+	<div class="container-fluid">
+		<div class="row text-center">
+			<div class="col-1">
+				<button class = "btn" type = "button" 
+					{% if student == True %}
+					onclick = "location.href='../../../student'"
+					{% endif %}
+					{% if teacher == True %}
+					onclick = "location.href='../../../teacher'"
+					{% endif %}>
+					<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-left" viewBox="0 0 16 16">
+  						<path d="M10 12.796V3.204L4.519 8 10 12.796zm-.659.753-5.48-4.796a1 1 0 0 1 0-1.506l5.48-4.796A1 1 0 0 1 11 3.204v9.592a1 1 0 0 1-1.659.753z"/>
+					</svg>
+				</button>
+			</div>
+			<div class="col-4">
+				{% for post in file %}
+					{% if post.branch in branch or post.branch == 'ALL' %}
+						<!-- <button class="btn btn-block"><a target = "_blank" href = {{post.adminupload.url}}>{{post.title}}</a></button> -->
+						<button class="btn btn-block" onclick="window.open('{{post.adminupload.url}}', '_blank');">{{post.title}}</button>
+					{% endif %}
+				{% endfor %}
+				
+			</div>
+			<div class="col-7 display">
+				<!-- <embed src="example pdf.pdf" type="application/pdf" width="100%" height="600px" /> -->
+				<img src="{% static 'corona.jpg' %}">
+			</div>
+		</div>
+	</div>
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>

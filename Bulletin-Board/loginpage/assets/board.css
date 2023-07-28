@@ -1,0 +1,188 @@
+*{
+    margin: 0;
+    padding:0;
+}
+
+body{
+    background-color: #f9f9f9;
+    font:600 18px 'Open Sans',sans-serif;
+}
+
+.group{
+    display: flex;
+    position:relative;
+    margin: 0px 30px;
+    justify-content: center;
+    align-items: center;
+}
+
+div.group > a{
+    line-height: 25px;
+    vertical-align: middle;
+}
+
+#student{
+    float: right;
+    background-color: #50CAFF;
+    /*padding:5px 30px;*/
+	border-radius:25px;
+	color:white;
+	border: none !important;
+}
+
+#teacher{
+    /* float: right; */
+    background-color: #3AE88A;
+    align-items: center;
+    justify-content: center;
+    /*padding: 5px 30px;*/
+    border-radius:25px;
+    color:white;
+    border: none !important;
+
+}
+
+.container1{
+    position: relative;
+    margin:-50px 0;
+}
+
+.board{
+    position: relative;
+}
+
+img{
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    /*margin-top: 10px;*/
+    height: 142%;
+}
+
+a img{
+    width: 150px;
+}
+
+a>img{
+    opacity: 0.5;
+}
+
+#container{
+    display: block;
+    margin:80px 180px;
+    background-repeat:repeat;
+}
+
+
+.TnP, .CSE, .ME, .CE, .EE, .EC, .IT{
+    /* padding: 10px auto; */
+    margin:20px auto;
+    width: 150px;
+    height: 150px;
+    padding-top: 50px;
+}    
+.upper{
+    display: flex;
+}
+ 
+.lower{
+    display: flex;
+}
+
+
+a {
+    display:block;
+    /* float: left; */
+    position:relative;
+    z-index: 0;
+    background-color: #fff;
+    margin:auto;
+    padding: auto;
+    font: normal 600 18px "Over the Rainbow", "Helvetica Neue", Helvetica, sans-serif;
+    color: black;
+    /* text-transform: uppercase; */
+    text-decoration: none;
+    box-shadow: 3px 3px 8px rgb(39, 39, 39);
+    
+    transform: rotate(5deg);
+      -webkit-transform: rotate(5deg);
+         -moz-transform: rotate(5deg);
+          -ms-transform: rotate(5deg);
+           -o-transform: rotate(5deg);
+    
+    transition: all 0.2s ease-in;
+      -webkit-transition: all 0.5s ease-in;
+         -moz-transition: all 0.5s ease-in;
+          -ms-transition: all 0.5s ease-in;
+           -o-transition: all 0.5s ease-in;
+    
+}
+    
+    a:nth-child(3n+2){
+    color: black;
+    font-size: 22px;
+    transform: rotate(2deg);
+      -webkit-transform: rotate(2deg);
+         -moz-transform: rotate(2deg);
+          -ms-transform: rotate(2deg);
+           -o-transform: rotate(2deg);
+    }
+    
+    a:nth-child(4n+3){
+    font-size: 22px;
+    transform: rotate(-8deg);
+      -webkit-transform: rotate(-8deg);
+         -moz-transform: rotate(-8deg);
+          -ms-transform: rotate(-8deg);
+           -o-transform: rotate(-8deg);
+    }
+    
+    a:hover, a:focus{
+    /* background-color: #eee; */
+        outline:none;
+        transition: all 0.4s ease-in;
+        -webkit-transition: all 0.4s ease-in;
+         -moz-transition: all 0.4s ease-in;
+          -ms-transition: all 0.4s ease-in;
+           -o-transition: all 0.4s ease-in;
+    transform: scale(1.4);
+      -webkit-transform: scale(1.4);
+         -moz-transform: scale(1.4);
+          -ms-transform: scale(1.4);
+           -o-transform: scale(1.4);
+    box-shadow: 3px 3px 10px rgb(255, 249, 193);
+    z-index: 100;
+    }
+    
+    a:after{
+    display: block;
+    text-align: center;
+    /* margin: 20px 0 12px 0; */
+    content: attr(title);
+    transform: rotate(-4deg);
+      -webkit-transform: rotate(-4deg);
+         -moz-transform: rotate(-4deg);
+          -ms-transform: rotate(-4deg);
+           -o-transform: rotate(-4deg);
+    }
+    a:nth-child(3n+1):after{
+    color: #222;
+    transform: rotate(-3deg);
+      -webkit-transform: rotate(-3deg);
+         -moz-transform: rotate(-3deg);
+          -ms-transform: rotate(-3deg);
+           -o-transform: rotate(-3deg);
+    }
+    a.upload, a.logout{
+        transform: rotate(0deg);
+      -webkit-transform: rotate(0deg);
+         -moz-transform: rotate(0deg);
+          -ms-transform: rotate(0deg);
+           -o-transform: rotate(0deg);
+        font-size: 20px;
+        text-decoration: none;
+        padding: 15px 10px;
+        box-shadow: none;
+        margin: 11px 40px;
+    }

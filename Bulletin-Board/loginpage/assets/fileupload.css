@@ -1,0 +1,19 @@
+/*.form-group{
+	padding: 50px;
+}*/
+/*.form-control, .col-form-label{
+	display: inline;
+}*/
+form{
+	padding: 100px;
+	margin-right: 30px;
+}
+.row{
+	margin-bottom: 30px 0;
+}
+#padding{
+	padding-left: 16px;
+}
+#margin{
+	margin-top: 30px;
+}
